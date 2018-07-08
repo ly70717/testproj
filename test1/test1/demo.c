@@ -1,4 +1,5 @@
 #include <stdio.h>
+/*
 
 int Add(int  a, int b) 
 {
@@ -15,41 +16,45 @@ double chu(double a, double b)
 	
 	return c ;
 	
-}
+}*/
 
-int main()
+void lingxing(int x)
 {
-	int ret;
-	int c;
-	ret = Add(10, 5);
-	printf("%d", ret);
+	if (x < 0 || x % 2 == 0) return;
 
-	/*
-	int i,j;
+	int i, j;
 	int numeveryline = 0;
 	int numblank = 0;
 
-	for (i = 0; i < 9; i++)
+	int totalnum = x;
+	int midnum = (totalnum + 1) / 2;
+
+	for (i = 0; i < totalnum; i++)
 	{
-		if (i < 5 )
+		if (i < midnum)
 		{
 			numeveryline = 2 * i + 1;
 		}
 		else
 		{
-			numeveryline = 17 - 2 * i;
+			numeveryline = totalnum - 2 * ((i - midnum) + 1);
 		}
-		
-		numblank = (9 - numeveryline) / 2;
-		for (j = 0;j < numblank + numeveryline; ++j)
+
+		numblank = (totalnum - numeveryline) / 2;
+		for (j = 0; j < numblank + numeveryline; ++j)
 		{
-			if(j < numblank)
+			if (j < numblank)
 				printf(" ");
 			else
 				printf("*");
 		}
 		printf("\n");
 	}
-	*/
+}
+
+int main()
+{
+	lingxing(9);
 	getchar();
 }
+	
