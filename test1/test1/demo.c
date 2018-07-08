@@ -1,7 +1,30 @@
 #include <stdio.h>
 
+int Add(int  a, int b) 
+{
+	return a + b;
+}
+
+double chu(double a, double b)
+{
+	if (b == 0)
+	{
+		return 0;
+	}
+	double c = a / b;
+	
+	return c ;
+	
+}
+
 int main()
 {
+	int ret;
+	int c;
+	ret = Add(10, 5);
+	printf("%d", ret);
+
+	/*
 	int i,j;
 	int numeveryline = 0;
 	int numblank = 0;
@@ -27,5 +50,6 @@ int main()
 		}
 		printf("\n");
 	}
+	*/
 	getchar();
 }
